@@ -29,10 +29,10 @@ body, html {
 }
 
 .dropdown-menu {
-  display: none;
+  display: flex;
+  gap:20px;
   position: absolute;
   background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   list-style: none;
   padding: 0;
