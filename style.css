@@ -1,0 +1,297 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(images/Background.jpg);
+}
+.top{
+  word-spacing: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+/* styles.css */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: greenyellow;
+  color: black;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+#head{
+  color: #ddd;
+}
+.slide-in-fade {
+  opacity: 0; /* Start with element hidden */
+  animation: slideInFadeAnimation 1s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes slideInFadeAnimation {
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0%);
+  }
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/Background.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Ensure background is behind everything */
+  background-repeat: no-repeats;
+}
+img{
+  width: 70%;
+  border-radius: 50%;
+}
+@media all and (max-width:300px) {
+  img{
+      width: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.typewriter-container {
+  text-align: center;
+  color: white;
+}
+
+.typewriter-text {
+  border-right: 1px solid white;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 24px;
+  animation: typing 0.5s steps(30, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+.content {
+  display: none; /* Hide content initially */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+}
+
+.content.show {
+  display: block; /* Show content */
+  opacity: 1;
+}
+.About{
+  color: #ddd;
+}
+
+/* styles.css */
+.language{
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ddd;
+}
+.contact{
+  font-weight: bolder;
+  color: #ddd;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.skill {
+  width: calc(30% - 10px); 
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+.skill-bar {
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+
+.skill-level {
+  height: 25px;
+  width: 0;
+  background-color: #4caf50;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 25px;
+  color: white;
+  border-radius: 25px 0 0 25px;
+  position: relative;
+  transition: width 0.5s ease;
+}
+
+.skill-percentage {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .skill {
+      width: calc(100% - 20px); /* Full width with spacing */
+  }
+
+  .skill-bar {
+      margin-bottom: 10px;
+  }
+
+  .skill-name {
+      font-size: 16px;
+  }
+
+  .skill-level {
+      height: 20px;
+      line-height: 20px;
+  }
+
+  .skill-percentage {
+      right: 5px;
+      font-size: 14px;
+  }
+}
+/* styles.css */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: none;
+  margin-right: 60px;
+  width: 100%; /* Limit width of card container */
+}
+
+.card {
+ width: 30%;/* Three cards per row, adjust as needed */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 70%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-content p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: calc(100% - 20px); /* One card per row on even smaller screens */
+  }
+}
+.contact_icon{
+ word-spacing: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+footer{
+  margin: 0px;
+  color: #ddd;
+}
